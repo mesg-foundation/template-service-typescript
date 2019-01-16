@@ -1,10 +1,12 @@
 import { service } from "mesg-js"
 import { taskX } from "./tasks/taskX"
 
-const MESG = service()
+const mesg = service()
 
-MESG.listenTask({
+mesg.listenTask({
   taskX: taskX
 })
+.on('error', (error) => console.error(error))
 
-MESG.emitEvent("started", { x: true })
+mesg.emitEvent("started", { x: true })
+  .catch((error) => console.error(error))
