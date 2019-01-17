@@ -6,7 +6,7 @@ const mesg = service()
 mesg.listenTask({
   taskX: taskX
 })
-.on('error', (error) => console.error(error))
+  .on('error', (error) => console.error(error))
 
 mesg.emitEvent("started", { x: true })
   .catch((error) => console.error(error))
