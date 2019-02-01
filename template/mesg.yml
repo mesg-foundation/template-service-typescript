@@ -1,4 +1,5 @@
-name: "myservice"
+name: myservice
+sid: myservice
 description: "Description of my service"
 tasks:
   taskX:
