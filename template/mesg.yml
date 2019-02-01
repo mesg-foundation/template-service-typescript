@@ -1,4 +1,5 @@
-name: "myservice"
+name: myservice
+sid: myservice
 description: "Description of my service"
 tasks:
   taskX:
@@ -10,11 +11,11 @@ tasks:
     outputs:
       success:
         data:
-          x:
+          message:
             type: String
       error:
         data:
-          message:
+          error:
             type: String
 events:
   started:
