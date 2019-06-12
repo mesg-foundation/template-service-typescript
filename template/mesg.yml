@@ -9,14 +9,8 @@ tasks:
       bar:
         type: String
     outputs:
-      success:
-        data:
-          message:
-            type: String
-      error:
-        data:
-          error:
-            type: String
+      message:
+        type: String
 events:
   started:
     data:

@@ -1,9 +1,11 @@
-import { TaskInputs, TaskOutputs } from "mesg-js/lib/service"
+import { TaskInputs } from "mesg-js/lib/service"
 
-const taskX = (inputs: TaskInputs, outputs: TaskOutputs): Promise<void> => {
-  if (inputs.foo === "hello" && inputs.bar === "world") {
-    return outputs.success({ message: "Hello world is valid" })
+const taskX = (inputs: TaskInputs) => {
+  if (inputs.foo !== "hello" || inputs.bar !== "world") {
+    throw new Error("invalid inputs")
   }
-  return outputs.error({ error: "invalid inputs" })
+  return {
+    message: "Hello world is valid"
+  }
 }
 export { taskX }
