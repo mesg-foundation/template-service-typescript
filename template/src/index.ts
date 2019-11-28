@@ -1,7 +1,7 @@
-import { service } from "mesg-js"
+import  Service  from "@mesg/service"
 import { taskX } from "./tasks/taskX"
 
-const mesg = service()
+const mesg = new Service()
 
 mesg.listenTask({
   taskX: taskX

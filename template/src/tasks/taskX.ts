@@ -1,4 +1,4 @@
-import { TaskInputs } from "mesg-js/lib/service"
+import { TaskInputs } from "@mesg/service"
 
 const taskX = (inputs: TaskInputs) => {
   if (inputs.foo !== "hello" || inputs.bar !== "world") {
