@@ -1,6 +1,8 @@
-FROM node:10.15
+FROM node:12.16.2-stretch
 WORKDIR /app
 COPY ./package* ./
-RUN npm install
+RUN npm ci
 COPY . .
+RUN npm run build
+RUN npm prune --production
 CMD [ "npm", "start" ]
